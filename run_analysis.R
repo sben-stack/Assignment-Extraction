@@ -1,10 +1,3 @@
-# Merges the training and the test sets to create one data set. DONE
-# Extracts only the measurements on the mean and standard deviation for each measurement. DONE
-# Uses descriptive activity names to name the activities in the data set DONE 
-# Appropriately labels the data set with descriptive variable names. DONE
-# From the data set in step 4, creates a second, 
-# independent tidy data set with the average of each variable for each activity and each subject.
-
 # libraries
 library(dplyr)
 library(tidyr)
@@ -68,7 +61,7 @@ library(tidyr)
 # lecture tidying a dataset anschauen 
         grouped_dataset <- combo_selected %>% group_by(activity, subject) %>%
                 summarize_all(mean)
-        
+        write.csv(grouped_dataset, "tidydata.csv")
                 
                 
         
