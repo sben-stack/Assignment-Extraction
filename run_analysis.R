@@ -6,7 +6,7 @@ library(tidyr)
 # Activities stored in factor "labels"
         labels <- read.csv("data/activity_labels.txt", sep=" ", header = FALSE)
         names(labels)=c("label","activity")
-# Features stored in factor "features"
+# Features stored in "features"
         features <- as.vector(read.csv("data/features.txt", sep =" ", header=FALSE)[,2])
         
 ## Create the test data set ##
