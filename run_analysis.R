@@ -61,7 +61,7 @@ library(tidyr)
 # lecture tidying a dataset anschauen 
         grouped_dataset <- combo_selected %>% group_by(activity, subject) %>%
                 summarize_all(mean)
-        write.csv(grouped_dataset, "tidydata.csv")
+        write.table(grouped_dataset, "tidydata.txt", row.names = FALSE)
                 
                 
         
